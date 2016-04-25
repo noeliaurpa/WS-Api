@@ -1,0 +1,19 @@
+<h2>Edit product</h2>
+<div class="col-md-4" ng-repeat="(key, value) in products ">
+	<div class="newproduct">
+		<form ng-submit="editProduct()">
+			<div class="form-group">
+				<label for="usr">{{value.name}}</label>
+				<input type="text" class="form-control" ng-model="product.name">
+			</div>
+			<div class="form-group">
+				<label for="pwd">{{value.description}}</label>
+				<input type="text" class="form-control" ng-model="product.description" value = "hola" >
+			</div>
+			<div class="button-container">
+				<button><span>Go</span></button>
+			</div>
+			<p class="btn_register"><a ng-href="#/register">Register</a></p>
+		</form>
+	</div>
+</div>

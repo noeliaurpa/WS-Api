@@ -43,6 +43,16 @@
     controller: 'TransactionCtrl',
     controllerAs: 'transaction'
   })
+  .when('/newProduct', {
+    templateUrl: 'views/newproduct.html',
+    controller: 'NewproductCtrl',
+    controllerAs: 'newProduct'
+  })
+  .when('/editProduct', {
+    templateUrl: 'views/editproduct.html',
+    controller: 'AllProductsCtrl',
+    controllerAs: 'editProduct()'
+  })
   .otherwise({
     redirectTo: '/'
   });
