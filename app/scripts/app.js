@@ -48,10 +48,25 @@
     controller: 'NewproductCtrl',
     controllerAs: 'newProduct'
   })
-  .when('/editProduct', {
+  .when('/editProduct/:id', {
     templateUrl: 'views/editproduct.html',
-    controller: 'AllProductsCtrl',
-    controllerAs: 'editProduct()'
+    controller: 'EditproductCtrl',
+    controllerAs: 'editProduct'
+  })
+  .when('/showProduct/:id', {
+    templateUrl: 'views/showproduct.html',
+    controller: 'ShowproductCtrl',
+    controllerAs: 'showProduct'
+  })
+  .when('/newTransaction', {
+    templateUrl: 'views/newtransaction.html',
+    controller: 'NewtransactionCtrl',
+    controllerAs: 'newTransaction'
+  })
+  .when('/closeSession', {
+    templateUrl: 'views/closesession.html',
+    controller: 'ClosesessionCtrl',
+    controllerAs: 'closeSession'
   })
   .otherwise({
     redirectTo: '/'

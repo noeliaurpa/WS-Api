@@ -7,7 +7,7 @@ angular.module('wsApiApp')
         'AngularJS',
         'Karma'
     ];
-    debugger;
+    //debugger;
     $scope.new = function() {
         var user = $scope.user;
         User.save({user},function(data) {

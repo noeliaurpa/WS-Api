@@ -1,19 +1,34 @@
-<h2>Edit product</h2>
-<div class="col-md-4" ng-repeat="(key, value) in products ">
-	<div class="newproduct">
-		<form ng-submit="editProduct()">
-			<div class="form-group">
-				<label for="usr">{{value.name}}</label>
-				<input type="text" class="form-control" ng-model="product.name">
-			</div>
-			<div class="form-group">
-				<label for="pwd">{{value.description}}</label>
-				<input type="text" class="form-control" ng-model="product.description" value = "hola" >
-			</div>
-			<div class="button-container">
-				<button><span>Go</span></button>
-			</div>
-			<p class="btn_register"><a ng-href="#/register">Register</a></p>
-		</form>
-	</div>
+<p>Product</p>
+<div class="main all_products">
+  <div class="product">
+    <img src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/box-128.png"
+    alt="Texto Alternativo" class="img-circle img-thumbnail">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <div>
+      <span ng-click="edProduct(product.id)" class="glyphicon glyphicon-pencil"></span>
+  </div>
 </div>
+</div>
+
+
+<!-- <div class="login productedit">
+<p>editing product</p>
+  <form ng-submit="edit(product.id)">
+    <div class="form-group">
+      <label for="usr">Name:</label>
+      <input value="product.name" type="text" class="form-control" ng-model="product.name">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Description:</label>
+      <textarea class="form-control" rows="5" ng-model="product.description">{{ product.description }}</textarea>
+    </div>
+    <div class="form-group">
+      <img src="images/product_emply.png" alt="" />
+    </div>
+    <div class="button-container">
+      <button><span>Go</span></button>
+    </div>
+    <a ng-href="#/myproducts">I'm sorry, I want to return</a>
+  </form>
+</div> -->

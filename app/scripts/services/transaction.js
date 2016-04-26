@@ -9,5 +9,5 @@
  */
 angular.module('wsApiApp')
   .service('transaction', function ($resource) {
-    return $resource('http://localhost:3000/v1/transaction/');
+    return $resource('http://localhost:3000/v1/transactions');
   });

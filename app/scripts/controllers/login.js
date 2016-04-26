@@ -24,6 +24,4 @@ angular.module('wsApiApp')
 
         });
     };
-
-
 });

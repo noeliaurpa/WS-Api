@@ -5,13 +5,11 @@
             alt="Texto Alternativo" class="img-circle img-thumbnail">
             <h2>Name of product: {{value.name}}</h2>
             <p>Description of product: {{value.description}} </p>
+            <span ng-click="deleteProduct(value.id)" class="glyphicon glyphicon-trash"></span>
+            <span ng-click="getProductId(value.id)" class="glyphicon glyphicon-pencil"></span>
             <br>
             <a href="#" class="btn btn-primary text-center" title="See more">See works »</a>
         </div>
         <br>
     </div>
-
-
-
-
 </div>

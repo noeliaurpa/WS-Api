@@ -7,9 +7,8 @@
  * # MyproductsCtrl
  * Controller of the wsApiApp
  */
- 
  angular.module('wsApiApp')
- .controller('MyproductsCtrl', function ($scope, $http, $route, myProducts, $localStorage, $rootScope) {
+ .controller('MyproductsCtrl', function ($scope, $http, $route, myProducts, $localStorage, $rootScope, $location) {
  	this.awesomeThings = [
  	'HTML5 Boilerplate',
  	'AngularJS',
@@ -22,4 +21,31 @@
  	}).success(function(response){
  		$scope.products = response;
  	});
+
+
+$scope.deleteProduct = function(id) {
+      //Product.delete({'id': id});
+      //debugger;
+      //var parameter = id;
+
+    //console.log(parameter);
+    //console.log("'http://localhost:3000/v1/products/" + id + "'");
+    var url = "http://localhost:3000/v1/products/" + id ;
+    $http.delete(url , {
+      headers: {
+        "Authorization": 'Token token="' + JSON.parse(sessionStorage.getItem("ngStorage-token")) + '"'
+      }
+    }).success(function(response){
+      $location.path('/dashboard');
+      $route.reload();
+      console.log("Producto Eliminado");
+    });
+
+  };
+
+  $scope.getProductId = function(id) {
+    //debugger;
+    $location.path('editProduct/'+id);
+    $route.reload();
+  };
  });

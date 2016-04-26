@@ -1,25 +1,29 @@
+
 'use strict';
 
 /**
  * @ngdoc function
- * @name wsApiApp.controller:TransactionCtrl
+ * @name wsApiApp.controller:ClosesessionCtrl
  * @description
- * # TransactionCtrl
+ * # ClosesessionCtrl
  * Controller of the wsApiApp
  */
  angular.module('wsApiApp')
- .controller('TransactionCtrl', function ($scope, $http, $route, transaction, $localStorage, $rootScope) {
+ .controller('ClosesessionCtrl', function ($scope, $http, $location, $sessionStorage, $route) {
  	this.awesomeThings = [
  	'HTML5 Boilerplate',
  	'AngularJS',
  	'Karma'
  	];
- 	$http.get('http://localhost:3000/v1/transactions', {
+
+ 	var url = "http://localhost:3000/v1/signout";
+ 	$http.delete(url , {
  		headers: {
  			"Authorization": 'Token token="' + JSON.parse(sessionStorage.getItem("ngStorage-token")) + '"'
  		}
  	}).success(function(response){
- 		$scope.transactions = response;
+ 		$location.path('/');
+ 		$route.reload();
+ 		console.log("Close session");
  	});
  });
-
