@@ -7,7 +7,7 @@ angular.module('wsApiApp')
 	'AngularJS',
 	'Karma'
 	];
-	$http.get('http://localhost:3000/v1/products/', {
+	$http.get('http://api.proyecto.com:3000/v1/products', {
 		headers: {
 			"Authorization": 'Token token="' + JSON.parse(sessionStorage.getItem("ngStorage-token")) + '"'
 		}

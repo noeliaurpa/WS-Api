@@ -7,17 +7,17 @@ angular.module('wsApiApp')
         'AngularJS',
         'Karma'
     ];
-    //debugger;
+    
     $scope.new = function() {
-        var user = $scope.user;
-        User.save({user},function(data) {
-            swal("User Name: " + data.username, "User Created!", "success");
-            console.log("user create!");
+        debugger;
+        var parameter = JSON.stringify({name:$scope.user.name, username:$scope.user.username,
+         password:$scope.user.password,password_confirmation: $scope.user.password_confirmation});
+        
+        console.log(parameter);
+        $http.post('http://localhost:3000/v1/signup', parameter).success(function(response){
             $location.path('/');
-        }, function(error) {
-            console.log('There was an error loading', error.statusText);
-            swal("Error Creating User!", error.e, "error");
-
+            $route.reload();
+            console.log("Usuario Creado");
         });
     };
 });

@@ -20,7 +20,7 @@ angular.module('wsApiApp')
             // $route.reload();
         }, function(error) {
             console.log('There was an error loading', error.statusText);
-            swal("Invalid User or Password!", error.mms, "error");
+            
 
         });
     };

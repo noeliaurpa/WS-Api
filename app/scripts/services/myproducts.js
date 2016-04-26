@@ -9,5 +9,5 @@
  */
 angular.module('wsApiApp')
   .service('myProducts', function ($resource) {
-    return $resource('http://localhost:3000/v1/all');
+    return $resource('http://api.proyecto.com:3000/v1/all');
   });

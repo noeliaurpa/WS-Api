@@ -1,11 +1,11 @@
 <html ng-app="app">
   <body ng-controller="ctrl">
 <div class="sample" align="center">
-  <h1>AngularJS Combobox</h1>
+  <h1>Transactions: CambealoApp</h1>
 <select ng-model="selected" ng-options="opt as opt.name for opt in months" ng-init="selected='March'"></select>
 <select ng-model="selected1" ng-options="opt as opt.name for opt in days" ng-init="selected='Day'"></select>
-  <h3>You have selected : {{selected.id}}{{selected.name}}{{selected.description}}</h3>
-  <h3>You have selected : {{selected1.id}}{{selected1.name}}{{selected1.description}}</h3>
+  <h3>The product required : {{selected.id}}{{selected.name}}{{selected.description}}</h3>
+  <h3>My product offered : {{selected1.id}}{{selected1.name}}{{selected1.description}}</h3>
 </div>
     </body>
 </html>
