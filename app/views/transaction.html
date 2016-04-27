@@ -1,14 +1,13 @@
 <div class="iz" >
-	<a ng-href="#/newTransaction">New Transaction</a>
 	<div class="col-md-4" ng-repeat="(key, value) in transactions">
 		<div class="text-center">
-			<img src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/box-128.png"
+			<img src="https://cdn0.iconfinder.com/data/icons/shopping-e-commerce-9-1/64/credit_debit_card_arrows_activity_transactions-128.png"
 			alt="Texto Alternativo" class="img-circle img-thumbnail">
-			<h2>Producto Requerido: {{value.product_req_id}}</h2>
+			<p>Producto Requerido: {{value.product_req_id}}</p>
 			<p>Producto Ofrecido: {{value.product_offered_id}} </p>
 			<p>Estado: {{value.state}} </p>
 			<br>
-			<a href="#" class="btn btn-primary text-center" title="See more">See works »</a>
+			<span ng-click="deleteTransaction(value.id)" class="glyphicon glyphicon-trash"></span>
 		</div>
 		<br>
 	</div>

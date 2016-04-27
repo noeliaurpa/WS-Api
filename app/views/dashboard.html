@@ -1,14 +1,14 @@
+{{httpRequestInterceptor}}
 <div class="iz" >
-    <a ng-href = "#/newProduct"> New Product </a>
     <div class="col-md-4" ng-repeat="(key, value) in products">
         <div class="text-center">
             <img src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/box-128.png"
             alt="Texto Alternativo" class="img-circle img-thumbnail">
             <p>Id usuario: {{value.users_id}}</p>
-            <h2>Name of product: {{value.name}}</h2>
+            <p>Name of product: {{value.name}}</p>
             <p>Description of product: {{value.description}} </p>
             <br>
-            <a href="#" class="btn btn-primary text-center" title="See more">See works »</a>
+            <a ng-click="newTrans(value.id)">Interchange</a>
         </div>
         <br>
     </div>

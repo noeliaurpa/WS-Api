@@ -58,7 +58,7 @@
     controller: 'ShowproductCtrl',
     controllerAs: 'showProduct'
   })
-  .when('/newTransaction', {
+  .when('/newTransaction/:id', {
     templateUrl: 'views/newtransaction.html',
     controller: 'NewtransactionCtrl',
     controllerAs: 'newTransaction'

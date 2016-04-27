@@ -1,11 +1,17 @@
-<html ng-app="app">
-  <body ng-controller="ctrl">
-<div class="sample" align="center">
-  <h1>Transactions: CambealoApp</h1>
-<select ng-model="selected" ng-options="opt as opt.name for opt in months" ng-init="selected='March'"></select>
-<select ng-model="selected1" ng-options="opt as opt.name for opt in days" ng-init="selected='Day'"></select>
-  <h3>The product required : {{selected.id}}{{selected.name}}{{selected.description}}</h3>
-  <h3>My product offered : {{selected1.id}}{{selected1.name}}{{selected1.description}}</h3>
-</div>
-    </body>
-</html>
+	<div class="product">
+		<div class="img"><img src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/box-128.png"
+            alt="Texto Alternativo" class="img-circle img-thumbnail"></div>
+		<div class="content">
+			<p>Name product: {{ product.name }}</p>
+			<p>Description product: {{ product.description }}</p>
+		</div>
+	</div>
+
+	<div class="sample" align="center">
+		<form ng-submit="newTran()">
+			<h1>Product to change:</h1>
+			<select ng-model="selected" ng-options="opt as opt.name for opt in myproduc" ng-init="selected='myproduc'"></select>
+			<!-- <h3>My product offered : {{selected.id}}{{selected.name}}{{selected.description}}</h3> -->
+			<button><span>Interchange</span></button>
+		</form>
+	</div>

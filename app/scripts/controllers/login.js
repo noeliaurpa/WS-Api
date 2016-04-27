@@ -19,6 +19,7 @@ angular.module('wsApiApp')
             $location.path('/dashboard');
             // $route.reload();
         }, function(error) {
+            $location.path('/');
             console.log('There was an error loading', error.statusText);
             
 

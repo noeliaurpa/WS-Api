@@ -1,14 +1,15 @@
 <div class="iz" >
+    <a ng-href = "#/newProduct"> New Product </a>
     <div class="col-md-4" ng-repeat="(key, value) in products">
         <div class="text-center">
-            <img src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/box-128.png"
+            <img src="https://cdn0.iconfinder.com/data/icons/shopping-vol-4/128/P-1-26-128.png"
             alt="Texto Alternativo" class="img-circle img-thumbnail">
-            <h2>Name of product: {{value.name}}</h2>
+            <p>{{value.id}}</p>
+            <p>Name of product: {{value.name}}</p>
             <p>Description of product: {{value.description}} </p>
             <span ng-click="deleteProduct(value.id)" class="glyphicon glyphicon-trash"></span>
-            <span ng-click="getProductId(value.id)" class="glyphicon glyphicon-pencil"></span>
+            <span ng-click="getProductId(value.id)" class="glyphicon glyphicon-eye-open"></span>
             <br>
-            <a href="#" class="btn btn-primary text-center" title="See more">See works »</a>
         </div>
         <br>
     </div>

@@ -14,11 +14,14 @@
  	'AngularJS',
  	'Karma'
  	];
+
  	$http.get('http://localhost:3000/v1/all', {
  		headers: {
  			"Authorization": 'Token token="' + JSON.parse(sessionStorage.getItem("ngStorage-token")) + '"'
  		}
+
  	}).success(function(response){
+    //debugger;
  		$scope.products = response;
  	});
 
