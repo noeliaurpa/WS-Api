@@ -1,16 +1,17 @@
 <div class="iz" >
-    <a ng-href = "#/newProduct"> New Product </a>
-    <div class="col-md-4" ng-repeat="(key, value) in products">
-        <div class="text-center">
-            <img src="https://cdn0.iconfinder.com/data/icons/shopping-vol-4/128/P-1-26-128.png"
-            alt="Texto Alternativo" class="img-circle img-thumbnail">
-            <p>{{value.id}}</p>
-            <p>Name of product: {{value.name}}</p>
-            <p>Description of product: {{value.description}} </p>
-            <span ng-click="deleteProduct(value.id)" class="glyphicon glyphicon-trash"></span>
-            <span ng-click="getProductId(value.id)" class="glyphicon glyphicon-eye-open"></span>
+    <a class="btn_new" ng-href = "#/newProduct"> New Product </a>
+    <div class="contenedor">
+        <div class="pro col-md-4" ng-repeat="(key, value) in products">
+            <div class="conten">
+                <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-31/244/icon-208-128.png"
+                alt="Texto Alternativo" class="img-circle img-thumbnail">
+                <p>Name of product: {{value.name}}</p>
+                <p>Description of product: {{value.description}} </p>
+                <span ng-click="getProductId(value.id)" class="glyphicon glyphicon-eye-open"></span>
+                <button type="button" class="btn btn-danger btn-xs" ng-click="deleteProduct(value.id)"><i class="fa fa-trash-o"></i> Delete</button>
+                <br>
+            </div>
             <br>
         </div>
-        <br>
     </div>
 </div>

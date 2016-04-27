@@ -22,24 +22,21 @@
 
  	}).success(function(response){
     //debugger;
- 		$scope.products = response;
- 	});
+    $scope.products = response;
+  }).catch(function(response) {
+    alert('Failed: You have not log in. Please log');
+    $location.path('/');
+  });
 
 
-$scope.deleteProduct = function(id) {
-      //Product.delete({'id': id});
-      //debugger;
-      //var parameter = id;
-
-    //console.log(parameter);
-    //console.log("'http://localhost:3000/v1/products/" + id + "'");
+  $scope.deleteProduct = function(id) {
     var url = "http://localhost:3000/v1/products/" + id ;
     $http.delete(url , {
       headers: {
         "Authorization": 'Token token="' + JSON.parse(sessionStorage.getItem("ngStorage-token")) + '"'
       }
     }).success(function(response){
-      $location.path('/dashboard');
+      $location.path('/myProducts');
       $route.reload();
       console.log("Producto Eliminado");
     });
@@ -48,7 +45,7 @@ $scope.deleteProduct = function(id) {
 
   $scope.getProductId = function(id) {
     //debugger;
-    $location.path('editProduct/'+id);
+    $location.path('showProduct/'+id);
     $route.reload();
   };
- });
+});

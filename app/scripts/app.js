@@ -48,13 +48,13 @@
     controller: 'NewproductCtrl',
     controllerAs: 'newProduct'
   })
-  .when('/editProduct/:id', {
-    templateUrl: 'views/editproduct.html',
+  .when('/showProduct/:id', {
+    templateUrl: 'views/showproduct.html',
     controller: 'EditproductCtrl',
     controllerAs: 'editProduct'
   })
-  .when('/showProduct/:id', {
-    templateUrl: 'views/showproduct.html',
+  .when('/editProduct/:id', {
+    templateUrl: 'views/editproduct.html',
     controller: 'ShowproductCtrl',
     controllerAs: 'showProduct'
   })

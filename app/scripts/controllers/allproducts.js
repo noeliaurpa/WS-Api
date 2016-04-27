@@ -13,6 +13,7 @@ angular.module('wsApiApp')
 		}
 	}).success(function(response){
 		$scope.products = response;
+		$location.path('/dashboard');
 	});
 
 	$scope.newTrans = function(id){

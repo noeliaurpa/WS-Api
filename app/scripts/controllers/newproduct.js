@@ -24,7 +24,7 @@
  				"Authorization": 'Token token="' + JSON.parse(sessionStorage.getItem("ngStorage-token")) + '"'
  			}
  		}).success(function(response){
- 			$location.path('/dashboard');
+ 			$location.path('/myProducts');
  			$route.reload();
  			console.log("Producto Creado");
  		});

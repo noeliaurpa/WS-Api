@@ -20,7 +20,10 @@
  		}
  	}).success(function(response){
  		$scope.transactions = response;
- 	});
+ 	}).catch(function(response) {
+    alert('Failed: You have not log in. Please log');
+    $location.path('/');
+  });
 //-------------------------------------------------------------------------------------------------------------------------------------
  	$scope.deleteTransaction = function(id) {
       //Product.delete({'id': id});

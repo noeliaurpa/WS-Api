@@ -1,34 +1,19 @@
-<div class="pen-title">
-</div>
-<div class="container">
-  <div class="card"></div>
-  <div class="card">
-    <h1 class="title">Register</h1>
-     <form ng-submit="new()">
-         <div class="input-container">
-           <input type="text" id="Username" required="required" ng-model="user.username"/>
-           <label for="Username">Username</label>
-           <div class="bar"></div>
-         </div>
-         <div class="input-container">
-           <input type="text" id="Name" required="required" ng-model="user.name"/>
-           <label for="Name">Name</label>
-           <div class="bar"></div>
-         </div>
-         <div class="input-container">
-           <input type="password" id="Password" required="required" ng-model="user.password"/>
-           <label for="Password">Password</label>
-           <div class="bar"></div>
-         </div>
-         <div class="input-container">
-           <input type="password" id="Repeat Password" required="required" ng-model="user.password_confirmation"/>
-           <label for="Repeat Password">Repeat Password</label>
-           <div class="bar"></div>
-         </div>
-         <div class="button-container">
-           <button><span>Go</span></button>
-         </div>
-       </form>
-  </div>
+  <form name="login-form" class="login-form" ng-submit="new()">
 
-</div>
+    <div class="header">
+      <h1>Register</h1>
+    </div>
+    <div class="content">
+      <input name="username" type="text" class="input username" placeholder="Username" ng-model="user.username"/>
+      <div class="user-icon"></div>
+      <input name="username" type="text" class="input username" placeholder="Name" ng-model="user.name"/>
+      <div class="user-icon"></div>
+      <input name="password" type="password" class="input username" placeholder="Password" ng-model="user.password"/>
+      <div class="pass-icon"></div> 
+      <input name="password" type="password" class="input username" placeholder="Password Confirm" ng-model="user.password_confirmation"/>
+      <div class="pass-icon"></div>   
+    </div>
+    <div class="footer">
+      <input type="submit" name="submit" value="Register" class="button" />
+    </div>
+  </form>

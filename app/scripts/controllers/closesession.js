@@ -25,5 +25,8 @@
  		$location.path('/');
  		$route.reload();
  		console.log("Close session");
+ 	}).catch(function(response) {
+ 		alert('Failed: You have not log in. Please log');
+ 		$location.path('/');
  	});
  });

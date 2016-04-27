@@ -1,21 +1,14 @@
-<div class="login productedit">
-  <p>Editing product</p>
-  <form ng-submit="edit(product.id)">
-    <div class="form-group">
-      <label for="usr">Name:</label>
-      <input value="product.name" type="text" class="form-control" ng-model="product.name">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Description:</label>
-      <textarea class="form-control" rows="5" ng-model="product.description">{{ product.description }}</textarea>
-    </div>
-    <div class="form-group">
-      <img src="https://cdn0.iconfinder.com/data/icons/shopping-vol-4/128/P-1-26-128.png"
+<div class="conten">
+  <h2>Product: </h2>
+  <div class="main all_products">
+    <div class="product">
+      <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-31/244/icon-208-128.png"
       alt="Texto Alternativo" class="img-circle img-thumbnail">
+      <p>Name product: {{ product.name }}</p>
+      <p>Description product: {{ product.description }}</p>
+      <div>
+        <span ng-click="edProduct(product.id)" class="glyphicon glyphicon-pencil"></span>
+      </div>
     </div>
-    <div class="button-container">
-      <button><span>Edit</span></button>
-    </div>
-    <a ng-href="#/myProducts">Back</a>
-  </form>
+  </div>
 </div>

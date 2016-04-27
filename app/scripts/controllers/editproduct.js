@@ -28,7 +28,7 @@
 
  	$scope.edProduct = function(id) {
         //debugger;
-    $location.path('showProduct/'+id);
+    $location.path('editProduct/'+id);
     $route.reload();
     };
  });
